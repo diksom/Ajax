@@ -21,3 +21,8 @@ Route::get('todo', 'TodoController@index');
 Route::post('todo', 'TodoController@store');
 Route::post('todo/change-done-status/{id}', 'TodoController@changeDoneStatus');
 Route::post('todo/delete/{id}', 'TodoController@delete');
+
+Route::get('index', 'IndexController@index');
+Route::post('index', 'IndexController@store');
+Route::post('index/change-name/{id}', 'IndexController@changeName');
+Route::post('index/delete/{id}', 'IndexController@delete');
