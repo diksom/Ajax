@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TodoController;
 use Illuminate\Http\Request;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('todo', 'TodoController@index');
+Route::post('todo', 'TodoController@store');
+Route::post('todo/change-done-status/{id}', 'TodoController@changeDoneStatus');
+Route::post('todo/delete/{id}', 'TodoController@delete');
